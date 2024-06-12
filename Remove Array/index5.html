@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending Order / Sorting Array using while loop</title>
+</head>
+<body>
+    <script>
+        function sort() {
+            let i = 0;
+            while (i < a.length) { 
+                let j = i + 1;
+                while (j < a.length) {
+                    let temp;
+                    if (a[i] > a[j]) {
+                        temp = a[i];
+                        a[i] = a[j];
+                        a[j] = temp;
+                    }
+                    j++;
+                }
+                i++;
+            }
+        }
+        let a = [55, 12, 84, 34, 10];
+        sort();
+        console.log(a);
+    </script>
+</body>
+</html>
