@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store only boundary Elements of 2D array</title>
+</head>
+<body>
+    <script>
+       function arro(arr) {
+            let newarr = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (i == 0 || i == arr.length - 1 || j==0 || j == arr[i].length - 1) {
+                        newarr.push(arr[i][j]);
+                    }
+                }
+            }
+            return newarr;
+        }
+
+        let a = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12],
+            [13, 14, 15, 16],
+        ];
+        let ans = arro(a);
+        console.log(ans); 
+    </script>
+</body>
+</html>

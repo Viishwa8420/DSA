@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Array Specific Order</title>
+</head>
+<body>
+    <script>
+        function customOrder(arr) {
+            let result = [];
+            result = result.concat(arr[0].slice().reverse());
+            result = result.concat(arr[1]);
+            result = result.concat(arr[2].slice().reverse());
+
+            return result;
+        }
+        let arr = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        let ans = customOrder(arr);
+        console.log(ans); 
+    </script>
+</body>
+</html>

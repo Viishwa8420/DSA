@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending Order / Sorting Array using for loop</title>
+</head>
+<body>
+    <script>
+        function sort(){
+          
+            for(i=0;i<=a.length;i++){
+                for(j=i+1;j<=a.length;j++){
+                    let temp;
+                    if(a[i] > a[j]){
+                        temp = a[i];
+                        a[i] = a[j];
+                        a[j] = temp;
+                    }
+                }
+            }
+        }
+        let a = [3,12,10,8,7];
+        sort();
+        console.log(a);
+    </script>
+</body>
+</html>
