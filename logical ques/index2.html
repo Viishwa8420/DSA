@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lower bound</title>
+</head>
+<body>
+    <script>
+        function Sort(arr) {
+            let n = arr.length;
+            let i = 0;
+
+            while (i < n) {
+                let j = 0;
+                while (j < n - 1) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                    j++;
+                }
+                i++;
+            }
+
+            return arr[0]; 
+        }
+
+        let a = [3, 12, 10, 8, 7];
+        let LowerBound = Sort(a);
+        console.log(`Lower Bound = ${LowerBound}`);
+    </script>
+</body>
+</html>

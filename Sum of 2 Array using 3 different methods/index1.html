@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Of 2 Array Using Push Method</title>
+</head>
+<body>
+    <script>
+        let arr1 = [12,1,2,5,8,44,53];
+        let arr2 = [2,11,33,22];
+        sum = [];
+
+        let i = 0,j = 0;
+        while(i<arr1.length && j<arr2.length){
+            sum.push(arr1[i] + arr2[j])
+            i++;
+            j++;
+        }
+
+        while(i<arr1.length){
+           sum.push( arr1[i]);
+           i++;
+        }
+        while(j<arr2.length){
+           sum.push( arr2[j]);
+           j++;
+        }
+        console.log(sum);
+    </script>
+</body>
+</html>

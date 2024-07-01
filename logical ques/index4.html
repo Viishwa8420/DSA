@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all zeros at last</title>
+</head>
+<body>
+    <script>
+        arr = [2,0,5,0,11,0,8,15]
+        let i = 0;
+        let end = arr.length;
+        let ans = [];
+        let zerocount = 0;
+
+        while(i < end){
+            if(arr[i] != 0){
+                ans.push(arr[i])
+            }
+            else{
+                zerocount++;
+            }
+            i++;
+        }
+        while(zerocount > 0){
+            ans.push(0);
+            zerocount--;
+        }
+        console.log(ans);
+    </script>
+</body>
+</html>

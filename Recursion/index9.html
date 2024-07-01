@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort an array in ascending order using recursion</title>
+</head>
+
+<body>
+    <script>
+        let arr = [60, 4, 5, 22, 70, 55, 21, 11];
+        function recurse(i) {
+            if (i >= arr.length - 1) {
+                return;
+            }
+            function swapWithNext(j) {
+                if (j >= arr.length) {
+                    return; 
+                }
+                if (arr[i] > arr[j]) {
+                    
+                    let temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+                swapWithNext(j + 1);
+            }
+            swapWithNext(i + 1);
+            recurse(i + 1); 
+        }
+        recurse(0); 
+        console.log("Sorted Array:", arr);
+    </script>
+</body>
+
+</html>

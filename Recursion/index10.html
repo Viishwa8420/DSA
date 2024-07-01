@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print subtraction of n to 1 number using recursion</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Please enter value for n:"));
+        let sub = n;
+
+        function recurse(no){
+            let Newno = no - 1;
+            if(Newno >= 1){
+                sub -= Newno;
+                recurse(Newno);
+            }
+        }
+        recurse(n);
+        console.log(`sub = ${sub}`);
+    </script>
+</body>
+</html>
