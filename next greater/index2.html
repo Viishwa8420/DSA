@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+const players = new Map([['sagar','makwana'],['nikhil','ladani'],['keyur','vora']]);
+
+
+for(const player of players.keys()){
+  console.log(player);
+}
+
+for(const player of players.values()){
+  console.log(player);
+}
+
+
+players.forEach(( value,key) =>{
+  const message =` hii my name is ${key} ${value}`;
+    console.log(message)
+})
+    </script>
+</body>
+</html>

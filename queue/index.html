@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue fifo</title>
+</head>
+
+<body>
+    <script>
+        // queue follows fifo rutes
+        // Array
+        // Pattern 2
+        // linked list
+        // stack/ queue
+
+        class Queue {
+            constructor() {
+                this.items = [];
+            }
+
+            // Enqueue an element to the queue
+            enqueue(element) {
+                this.items.push(element);
+            }
+
+            // Dequeue an element from the queue
+            dequeue() {
+                if (this.isEmpty()) {
+                    return "Queue is empty";
+                }
+                return this.items.shift();
+            }
+
+            // Get the front element of the queue
+            front() {
+                if (this.isEmpty()) {
+                    return "Queue is empty";
+                }
+                return this.items[0];
+            }
+
+            // Check if the queue is empty
+            isEmpty() {
+                return this.items.length === 0;
+            }
+
+            // Get the size of the queue
+            size() {
+                return this.items.length;
+            }
+
+            // Print the queue elements
+            printQueue() {
+                console.log(this.items.join(' '));
+            }
+        }
+
+        // Example usage
+        let queue = new Queue();
+
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+
+        console.log(queue.dequeue());    // Outputs: 10
+        console.log(queue.front());      // Outputs: 20
+        console.log(queue.isEmpty());    // Outputs: false
+        console.log(queue.size());       // Outputs: 2
+
+        queue.printQueue();              // Outputs: 20 30
+
+    </script>
+</body>
+
+</html>
